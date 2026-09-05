@@ -3,239 +3,451 @@ body {
     font-family: Arial, sans-serif;
 
     background-image: url("../img/fondo.png");
-    background-repeat: repeat-y;   /* ← ESTO hace la cascada */
-    background-size: 100% auto;    /* ← mantiene proporción */
+    background-repeat: repeat-y;
+    background-size: 100% auto;
     background-position: top center;
 }
 
-/* HEADER */
+/* =========================
+   HEADER
+========================= */
+
 header {
     text-align: center;
     padding: 20px;
 }
 
 header h1 {
-    background: linear-gradient(90deg, rgba(255,78,205,0.7), rgba(138,43,226,0.4));
+    background: linear-gradient(
+        90deg,
+        rgba(130, 20, 35, 0.88),
+        rgba(20, 105, 75, 0.82)
+    );
+
     color: white;
     display: inline-block;
     padding: 15px 30px;
     border-radius: 10px;
+
+    border: 1px solid rgba(255, 255, 255, 0.45);
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
-/* CONTENEDOR */
+/* =========================
+   CONTENEDOR
+========================= */
+
 .contenedor {
     display: flex;
     padding: 20px;
     gap: 20px;
 }
 
-/* CONTENIDO IZQUIERDO */
+/* =========================
+   CONTENIDO IZQUIERDO
+========================= */
+
 .contenido {
     width: calc(100% - 350px);
 }
 
-/* TARJETA */
+/* =========================
+   TARJETAS
+========================= */
+
 .card {
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 0 15px rgba(0,0,0,0.3);
-    margin-bottom: 100px; /* espacio entre noticias */
+
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.35);
+
+    margin-bottom: 100px;
+
+    border: 1px solid rgba(255, 255, 255, 0.45);
 }
 
-/* HEADER (ANTES VERDE → AHORA DEGRADADO) */
+/* =========================
+   ENCABEZADO DE TARJETA
+========================= */
+
 .card-header {
-    background: linear-gradient(90deg, rgba(255,78,205,0.7), rgba(138,43,226,0.4));
+    background: linear-gradient(
+        90deg,
+        rgba(145, 25, 40, 0.90),
+        rgba(25, 115, 75, 0.85)
+    );
+
     padding: 15px;
     text-align: center;
     color: white;
+
+    text-shadow:
+        0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-/* CUERPO */
+/* =========================
+   CUERPO
+========================= */
+
 .card-body {
-    background-color: rgba(255,255,255,0.6);
-    color: black;
+    background: rgba(255, 250, 235, 0.78);
+
+    color: #26352d;
     text-align: center;
     padding: 20px;
+
+    backdrop-filter: blur(4px);
 }
 
 .card-body img {
     width: 100%;
     max-width: 300px;
     border-radius: 10px;
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.25);
 }
 
-/* FOOTER (ANTES VERDE → AHORA DEGRADADO) */
+/* =========================
+   FOOTER
+========================= */
+
 .card-footer {
-    background: linear-gradient(90deg, rgba(255,78,205,0.9), rgba(138,43,226,0.9));
+    background: linear-gradient(
+        90deg,
+        rgba(125, 20, 35, 0.94),
+        rgba(18, 100, 65, 0.94)
+    );
+
     padding: 15px;
     color: white;
+
+    text-shadow:
+        0 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-/* SIDEBAR */
+/* =========================
+   SIDEBAR
+========================= */
+
 .sidebar {
     width: 30%;
 }
 
-/* BOTONES */
+/* =========================
+   BOTONES
+========================= */
+
 .sidebar a,
 .btn-menu {
     display: block;
-    background: linear-gradient(90deg, rgba(255,78,205,0.4), rgba(138,43,226,0.4));
+
+    background: linear-gradient(
+        90deg,
+        rgba(125, 25, 42, 0.76),
+        rgba(20, 105, 70, 0.76)
+    );
+
     color: white;
     text-decoration: none;
+
     padding: 12px;
     margin-bottom: 12px;
+
     text-align: center;
     border-radius: 10px;
+
     transition: 0.3s;
+
     font-weight: bold;
     font-family: Arial, sans-serif;
     font-size: 16px;
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+
+    box-shadow:
+        0 3px 8px rgba(0, 0, 0, 0.20);
 }
 
-/* EFECTO HOVER */
+/* =========================
+   HOVER
+========================= */
+
 .sidebar a:hover {
-    background: linear-gradient(90deg, rgba(138,43,226,0.7), rgba(255,78,205,0.4));
+    background: linear-gradient(
+        90deg,
+        rgba(165, 30, 45, 0.90),
+        rgba(25, 125, 80, 0.90)
+    );
+
+    transform: translateY(-2px);
 }
 
-/* NAV (botón de inicio) */
+/* =========================
+   NAV
+========================= */
+
 nav {
-    position: fixed;   /* se queda fijo al hacer scroll */
+    position: fixed;
     top: 20px;
     left: 20px;
+
+    z-index: 1000;
 }
 
-/* BOTÓN DE INICIO */
+/* =========================
+   BOTÓN INICIO
+========================= */
+
 nav a {
-    background: linear-gradient(90deg, rgba(255,78,205,0.7), rgba(138,43,226,0.7));
+    background: linear-gradient(
+        90deg,
+        rgba(125, 20, 35, 0.90),
+        rgba(20, 100, 65, 0.90)
+    );
+
     color: white;
     text-decoration: none;
+
     padding: 10px 15px;
     border-radius: 8px;
+
     font-weight: bold;
     transition: 0.3s;
+
+    border: 1px solid rgba(255, 255, 255, 0.4);
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.25);
 }
 
 /* HOVER */
+
 nav a:hover {
-    background: linear-gradient(90deg, rgba(138,43,226,0.9), rgba(255,78,205,0.7));
+    background: linear-gradient(
+        90deg,
+        rgba(170, 30, 45, 0.95),
+        rgba(25, 125, 80, 0.95)
+    );
 }
 
-/* BOTÓN DE ASIGNACIONES (igual estilo que los otros) */
+/* =========================
+   BOTÓN ASIGNACIONES
+========================= */
+
 .btn-menu {
     width: 100%;
-    background: linear-gradient(90deg, rgba(255,78,205,0.4), rgba(138,43,226,0.4));
+
+    background: linear-gradient(
+        90deg,
+        rgba(125, 25, 42, 0.76),
+        rgba(20, 105, 70, 0.76)
+    );
+
     color: white;
+
     padding: 12px;
     margin-bottom: 12px;
-    border: none;
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
     border-radius: 10px;
+
     cursor: pointer;
-    font-weight: bold;
-    transition: 0.3s;
 
     font-family: Arial, sans-serif;
     font-weight: bold;
     font-size: 16px;
+
     text-align: center;
+
+    transition: 0.3s;
 }
 
 /* HOVER */
+
 .btn-menu:hover {
-    background: linear-gradient(90deg, rgba(138,43,226,0.7), rgba(255,78,205,0.4));
+    background: linear-gradient(
+        90deg,
+        rgba(165, 30, 45, 0.90),
+        rgba(25, 125, 80, 0.90)
+    );
+
+    transform: translateY(-2px);
 }
 
-/* SUBMENÚ OCULTO */
+/* =========================
+   SUBMENÚ
+========================= */
+
 .submenu {
     display: none;
     margin-left: 10px;
 }
 
-/* OPCIONES SEMANA 3 Y 4 */
 .submenu a {
     display: block;
-    background: rgba(255,255,255,0.2);
-    color: white;
+
+    background: rgba(255, 250, 235, 0.65);
+
+    color: #26352d;
     text-decoration: none;
+
     padding: 10px;
     margin-bottom: 8px;
+
     border-radius: 8px;
     text-align: center;
+
+    border: 1px solid rgba(20, 100, 65, 0.35);
+
+    transition: 0.3s;
 }
 
-/* HOVER */
 .submenu a:hover {
-    background: rgba(255,255,255,0.4);
+    background: rgba(255, 255, 255, 0.88);
 }
 
-/* CONTENEDOR DE ASIGNACIONES */
+/* =========================
+   ASIGNACIONES
+========================= */
+
 .asignaciones-container {
     max-width: 900px;
     margin: auto;
     padding: 20px;
 }
 
-/* TÍTULOS DE SEMANA */
-#semana3 h2, #semana4 h2 {
-    background: linear-gradient(90deg, rgba(255,78,205,0.7), rgba(138,43,226,0.4));
+/* =========================
+   TÍTULOS DE SEMANA
+========================= */
+
+#semana3 h2,
+#semana4 h2 {
+
+    background: linear-gradient(
+        90deg,
+        rgba(125, 20, 35, 0.88),
+        rgba(20, 105, 65, 0.84)
+    );
+
     color: white;
+
     padding: 10px;
     border-radius: 10px;
+
     text-align: center;
+
+    border: 1px solid rgba(255, 255, 255, 0.4);
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.25);
 }
 
-/* TARJETAS DE TRABAJOS */
+/* =========================
+   TARJETAS DE TRABAJOS
+========================= */
+
 .trabajo {
-    background: rgba(255,255,255,0.6);
+    background: rgba(255, 250, 235, 0.76);
+
     margin: 15px 0;
     padding: 15px;
+
     border-radius: 10px;
+
     text-align: center;
+
+    border: 1px solid rgba(20, 100, 65, 0.35);
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.18);
+
+    backdrop-filter: blur(4px);
 }
 
 .trabajo img {
     width: 100%;
-    max-width: 600px; /* antes 400px */
+    max-width: 600px;
+
     border-radius: 10px;
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.25);
 }
 
-/* SEPARADOR TIPO TARJETA ROSA */
+/* =========================
+   SEPARADOR
+========================= */
+
 .separador {
-    background: linear-gradient(90deg, rgba(255,78,205,0.6), rgba(138,43,226,0.4));
+
+    background: linear-gradient(
+        90deg,
+        rgba(135, 25, 40, 0.82),
+        rgba(20, 110, 70, 0.78)
+    );
+
     color: white;
+
     padding: 12px;
+
     border-radius: 10px;
+
     text-align: center;
     font-weight: bold;
+
     margin: 30px 0 20px 0;
+
+    border: 1px solid rgba(255, 255, 255, 0.4);
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.25);
+
     backdrop-filter: blur(5px);
 }
+
+/* =========================
+   PDF
+========================= */
 
 .pdf-cascada img {
     width: 100%;
     max-width: 900px;
+
     display: block;
     margin: 20px auto;
+
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+
+    box-shadow:
+        0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-/* CAJA DE TEXTO PARA CONSIDERACIONES */
+/* =========================
+   CAJA DE CONSIDERACIONES
+========================= */
+
 .texto-bonito {
-    background: rgba(255, 182, 193, 0.5); /* rosado suave */
-    border: 2px solid rgba(138,43,226,0.7); /* morado */
+
+    background: rgba(255, 250, 235, 0.78);
+
+    border: 2px solid rgba(135, 25, 40, 0.65);
+
     border-radius: 12px;
+
     padding: 15px;
     margin-bottom: 15px;
 
-    color: #4a004a; /* morado oscuro para texto */
+    color: #26352d;
+
     font-size: 16px;
     line-height: 1.6;
 
-    box-shadow: 0 0 10px rgba(138,43,226,0.3);
-    backdrop-filter: blur(3px);
-}
+    box-shadow:
+        0 0 12px rgba(0, 0, 0, 0.22);
 
-.sidebar {
-    width: 30%;
-}
+    backdrop-filter: blur(4px);
+    }
